@@ -3,7 +3,7 @@ extends "res://singletons/utils.gd"
 # Extends the Utils class with many custom utility funcs.
 # Use like any other util method, eg `Utils.brotils_text_color()`
 
-const LOG_NAME = "Darkly77-Brotils"
+const BROTILS_LOG = "Darkly77-Brotils"
 
 const _brotils_primary_stat_keys = [
 	"stat_max_hp",
@@ -116,7 +116,7 @@ func brotils_get_current_character():
 	return RunData.current_character
 
 
-func bfx_current_character_is(character_id:String)->bool:
+func brotils_current_character_is(character_id:String)->bool:
 	return RunData.current_character.my_id == character_id
 
 
@@ -132,7 +132,7 @@ func brotils_get_current_items():
 	return RunData.items
 
 
-func bfx_has_weapon_specific(my_id:String)->bool:
+func brotils_has_weapon_specific(my_id:String)->bool:
 	var has = false
 	for weapon in RunData.weapons:
 		if weapon.my_id == my_id:
@@ -161,7 +161,7 @@ func brotils_has_item(my_id)->bool:
 	return has
 
 
-# Custom: Misc
+# Custom: Numbers
 # =============================================================================
 
 # RNG check. Pass an int. Returns true if it passes the check, false otherwise.
