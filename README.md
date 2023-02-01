@@ -1,5 +1,7 @@
 # Brotato-Brotils
 
+![GitHub all releases](https://img.shields.io/github/downloads/BrotatoMods/Brotato-Brotils/total)
+
 Set of utilities and helpers for Brotato modding.
 
 ## Usage
