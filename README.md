@@ -4,6 +4,11 @@
 
 Set of utilities and helpers for Brotato modding.
 
+## Requirements
+
+* [ModLoader](https://github.com/GodotModding/godot-mod-loader) - v4+
+* *No dependencies*
+
 ## Usage
 
 Extends vanilla's *Utils.gd*, so all methods are used with the `Utils` class, eg `Utils.brotils_method()`. All Brotils methods are prefixed with `brotils_*`.
