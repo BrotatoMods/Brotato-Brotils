@@ -219,3 +219,29 @@ func brotils_cap_below(val, highest):
 # Cap the value, so it cannot be lower than `lowest`
 func brotils_cap_above(val, lowest):
 	return max(lowest, val)
+
+
+# Files
+# =============================================================================
+
+# Example: brotils_create_texture_from_image_path("C:/image.png", 96, 96)
+# Borrowed from HerbLoader: https://github.com/Citonaa/HerbLoader
+func brotils_create_texture_from_image_path(image_path: String, width: int = -1, height: int = -1) -> ImageTexture:
+	# Validation: File exists?
+	if not File.new().file_exists(image_path):
+		ModLoaderUtils.log_fatal("Error loading image with path: %s" % image_path, BROTILS_LOG)
+		return null
+
+	# Load from disk
+	var image = Image.new()
+	image.load(image_path)
+
+	# Resize image
+	if width > -1 and height > 1:
+		image.resize(width, height)
+
+	# Create texture
+	var texture = ImageTexture.new()
+	texture.create_from_image(image)
+
+	return texture
