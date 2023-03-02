@@ -25,7 +25,7 @@ const _brotils_primary_stat_keys = [
 ]
 
 
-# Custom
+# Text
 # =============================================================================
 
 # @todo: see also: mods-unpacked/Darkly77-BFX/effects/effect_gain_items.gd
@@ -70,7 +70,7 @@ func brotils_text_color(text:String, clr:String)->String:
 
 
 
-# Custom: Stats
+# Stats
 # =============================================================================
 
 func brotils_get_primary_stat_keys()->Array:
@@ -106,7 +106,7 @@ func brotils_get_neutral_primary_stats()->Array:
 
 
 
-# Custom: Character/Player
+# Character/Player
 # =============================================================================
 
 # Mostly just wrappers for ease of use
@@ -161,7 +161,7 @@ func brotils_has_item(my_id)->bool:
 	return has
 
 
-# Custom: Numbers
+# Numbers
 # =============================================================================
 
 # RNG check. Pass an int. Returns true if it passes the check, false otherwise.
