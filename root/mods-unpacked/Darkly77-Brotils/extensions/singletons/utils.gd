@@ -229,7 +229,7 @@ func brotils_cap_above(val, lowest):
 func brotils_create_texture_from_image_path(image_path: String, width: int = -1, height: int = -1) -> ImageTexture:
 	# Validation: File exists?
 	if not File.new().file_exists(image_path):
-		ModLoaderUtils.log_fatal("Error loading image with path: %s" % image_path, BROTILS_LOG)
+		ModLoaderLog.fatal("Error loading image with path: %s" % image_path, BROTILS_LOG)
 		return null
 
 	# Load from disk
