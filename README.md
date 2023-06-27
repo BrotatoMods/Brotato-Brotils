@@ -65,6 +65,12 @@ Mods will need to add Brotils as a dependency in their *manifest.json*:
 | ---- | ------- |
 | [brotils_text_color](#brotils_text_color) | Wrap a string in a BBCode color |
 
+### Misc
+
+| Name | Summary |
+| ---- | ------- |
+| [brotils_create_texture_from_image_path](#brotils_create_texture_from_image_path) | Create a texture in memory, from a file on disk |
+
 
 ## Player
 
@@ -253,3 +259,17 @@ var my_color_str = "[color=#00ff0]hello_world[/color]"
 | `tier2`     | `#4A9BD1` | Tier 2 - Blue |
 | `tier3`     | `#AD5AFF` | Tier 3 - Purple |
 | `tier4`     | `#FF3B3B` | Tier 4 - Red |
+
+
+## Misc
+
+### brotils_create_texture_from_image_path
+
+	brotils_create_texture_from_image_path(image_path: String, width: int = -1, height: int = -1) -> ImageTexture:
+
+Create a texture in memory, from a file on disk. Borrowed from HerbLoader: https://github.com/Citonaa/HerbLoader
+
+```gdscript
+# Example:
+brotils_create_texture_from_image_path("C:/image.png", 96, 96)
+```
